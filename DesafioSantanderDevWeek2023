@@ -1,0 +1,23 @@
+import pandas as pd
+
+# Etapa de Extração (Extract): Vamos criar um DataFrame de exemplo como fonte de dados.
+data = {
+    'ID': [1, 2, 3, 4, 5],
+    'Nome': ['Alice', 'Bob', 'Carol', 'David', 'Eve'],
+    'Idade': [25, 30, 22, 35, 28],
+    'Cidade': ['São Paulo', 'Rio de Janeiro', 'Belo Horizonte', 'Porto Alegre', 'Brasília']
+}
+
+df = pd.DataFrame(data)
+
+# Etapa de Transformação (Transform): Vamos calcular a idade média dos indivíduos.
+idade_media = df['Idade'].mean()
+
+# Etapa de Carregamento (Load): Vamos criar um novo DataFrame com os resultados da transformação.
+resultado = pd.DataFrame({'Idade Média': [idade_media]})
+
+# Exibir o resultado
+print("Dados Originais:")
+print(df)
+print("\nResultado da Transformação:")
+print(resultado)
